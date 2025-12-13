@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './index.css';
 import Particles from './components/animations/particles';
 import ScrambleText from './components/animations/scrambleText';
-import Button from './components/button';
+import Button from './components/generic-components/button';
 import placeholder from './assets/Placeholder1.jpg';
 import Hero from './components/sections/hero';
 import Projects from './components/sections/projects';
