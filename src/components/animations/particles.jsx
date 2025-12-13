@@ -126,7 +126,7 @@ const Particles = ({
 
     const resize = () => {
       const width = container.clientWidth;
-     const height = container.offsetHeight;
+      const height = container.offsetHeight;
       renderer.setSize(width, height);
       camera.perspective({ aspect: gl.canvas.width / gl.canvas.height });
     };
@@ -245,16 +245,10 @@ const Particles = ({
 
   return (
     <div ref={containerRef} className={`relative w-full ${className}`}>
-    {/* Partículas de fondo */}
-    <div className="absolute inset-0 z-0">
-      {/* Aquí tu canvas o elementos de partículas */}
+      <div className="relative z-10 flex flex-col">
+        {children}
+      </div>
     </div>
-
-    {/* Contenido encima de las partículas */}
-    <div className="relative z-10 flex flex-col">
-      {children}
-    </div>
-  </div>
   );
 };
 export default Particles;

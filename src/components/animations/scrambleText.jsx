@@ -64,13 +64,10 @@ export default function ScrambleText({
     }
     setDisplay(original.current);
   };
-
+  
+    //Intentar añadir un Children y no span para activar el hover sobre cualquier elemento y no solo texto
   return (
-    <span
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      className={`cursor-pointer inline-block transition-colors ${className}`}
-    >
+    <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={`cursor-pointer inline-block transition-colors ${className}`}>
       {display}
     </span>
   );
