@@ -1,23 +1,27 @@
 import React from 'react';
 import Carousel from '../generic-components/carousel';
 import '../../index.css';
+import strawdeck from '../../assets/strawdeck-project.png';
+import portfolio from '../../assets/portfolio-project.png';
 
 function Projects() {
     const slides = [
   {
-    image: "/img/project1.jpg",
-    title: "Proyecto 1",
-    description: "Landing page con React y Tailwind"
+    image: strawdeck,
+    title: "Strawdeck",
+    description: "Aplicación web para crear y ver las cartas del juego de One Piece Tcg.",
+    link:"https://github.com/Joantoniorm/StrawDeck"
   },
   {
-    image: "/img/project2.jpg",
-    title: "Proyecto 2",
-    description: "Dashboard con animaciones"
+    image: portfolio,
+    title: "Portfolio",
+    description: "Portfolio personal con animaciones y efectos.",
+    link:"https://github.com/Joantoniorm/portfolio"
   },
 ];
     return(
-        <section className='flex flex-col max-w-full max-h-full items-center py-12'>
-            <h1 className='w-full flex justify-center font-bold text-yellow-600 text-6xl mb-16'>Proyectos</h1>
+        <section id='projects' className='flex flex-col max-w-full max-h-full items-center py-12'>
+            <h1 className='text-4xl sm:text-5xl md:text-7xl font-doto text-yellow-600 mb-16 mt-16'>Proyectos</h1>
             <Carousel items={slides}></Carousel>
         </section>
     );

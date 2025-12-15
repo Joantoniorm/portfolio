@@ -1,4 +1,12 @@
+@font-face {
+  font-family: Doto;
+  src: url("./assets/fonts/Doto-Bold.ttf")
+}
 @import "tailwindcss";
+
+@theme{
+  --font-doto: Doto, "sans-serif";
+}
 html, body, #root {
   height: 100%;
   padding: 0%;
