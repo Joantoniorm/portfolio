@@ -81,7 +81,7 @@ export default function Dock({
   return (
       <motion.div
         style={{ height: panelHeight }}
-        className={`sticky top-12 z-50 flex items-end justify-center gap-4 ${className}`}
+        className={`sticky top-12 sm:top-3 md:top-12 z-50 flex items-end justify-center gap-4 ${className}`}
         onMouseMove={({ pageX }) => {
           isHovered.set(1);
           mouseX.set(pageX);
