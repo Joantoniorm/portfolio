@@ -11,12 +11,9 @@ import {
 import Dock from '../animations/dock';
 
 function Header() {
-    const [isMobile, setIsMobile] = useState(false);
     const [view, setView] = useState('dock');
 
     function handleResize() {
-        const mobile = window.innerWidth < 768;
-        setIsMobile(mobile);
         setView('dock');
     }
 
@@ -38,7 +35,7 @@ function Header() {
             setView(prev => (prev === 'dock' ? 'menu' : 'dock')),
     };
 
-    const fullDeploy = [
+    const fullDock = [
         { icon: <VscHome size={18} />, label: 'Inicio', onClick: () => scrollTo('hero') },
         { icon: <VscGithub size={18} />, label: 'Proyectos', onClick: () => scrollTo('projects') },
         { icon: <VscBriefcase size={18} />, label: 'Experiencia', onClick: () => scrollTo('experience') },
@@ -56,15 +53,15 @@ function Header() {
         menuButton,
     ];
 
-    const stackDeploy = [menuButton];
+    const stackDock = [menuButton];
 
     return (
         <>
             {view === 'dock' && (
-                <div className="sticky sm:top-3 md:top-12 flex justify-end pr-30 animate-scale-in">
+                <div className="sticky z-50 sm:top-3 md:top-12 flex justify-end pr-30 animate-scale-in">
                     <div className="animate-scale-in">
                         <Dock
-                            items={stackDeploy}
+                            items={stackDock}
                             panelHeight={68}
                             baseItemSize={50}
                             magnification={70}
@@ -76,7 +73,7 @@ function Header() {
 
             {view === 'menu' && (
                 <Dock
-                    items={ fullDeploy }
+                    items={ fullDock }
                     panelHeight={68}
                     baseItemSize={50}
                     magnification={70}
